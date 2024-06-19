@@ -15,6 +15,7 @@
                 <li><a href="#contact">Contactez-nous</a></li>
                 {% if user %}
                     <li>Connecté en tant que {{ user.name }}</li>
+                    <li><a href="{{ url_for('profile') }}">Mon Profil</a></li>
                     {% if user.is_employee %}
                         <li><a href="{{ url_for('my_assigned_devis') }}">Mes Devis Assignés</a></li>
                     {% else %}

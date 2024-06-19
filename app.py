@@ -76,6 +76,23 @@ def logout():
     session.pop('employee_id', None)
     return redirect(url_for('index'))
 
+@app.route('/profile', methods=['GET', 'POST'])
+def profile():
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+
+    user = User.query.filter_by(id=session['user_id']).first()
+
+    if request.method == 'POST':
+        user.name = request.form['name']
+        user.email = request.form['email']
+        if request.form['password']:
+            user.password = request.form['password']
+        db.session.commit()
+        return redirect(url_for('profile'))
+
+    return render_template('profile.html', user=user)
+
 @app.route('/create_devis', methods=['GET', 'POST'])
 def create_devis():
     if 'user_id' not in session:

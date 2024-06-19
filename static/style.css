@@ -480,3 +480,62 @@ footer p {
 .edit-devis-container .btn:hover {
     background-color: #095bb5;
 }
+/* Styles pour la page de profil */
+.profile-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #0a74da;
+}
+
+.profile-container .form-group {
+    margin-bottom: 20px;
+}
+
+.profile-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.profile-container .btn {
+    background-color: #0a74da;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.profile-container .btn:hover {
+    background-color: #095bb5;
+}
+
+.profile-container a.btn {
+    display: inline-block;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #0a74da;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.profile-container a.btn:hover {
+    background-color: #095bb5;
+}
