@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Croc</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue à Cyber Croc</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Nos Services</a></li>
+                <li><a href="#contact">Contactez-nous</a></li>
+                {% if user %}
+                    <li>Connecté en tant que {{ user.name }}</li>
+                    {% if user.is_employee %}
+                        <li><a href="{{ url_for('my_assigned_devis') }}">Mes Devis Assignés</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('my_devis') }}">Mes Devis</a></li>
+                    {% endif %}
+                    {% if user.is_admin %}
+                        <li><a href="{{ url_for('admin_dashboard') }}">Admin Dashboard</a></li>
+                    {% endif %}
+                    <li><a href="{{ url_for('logout') }}">Se déconnecter</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('signup') }}">S'inscrire</a></li>
+                    <li><a href="{{ url_for('login') }}">Se connecter</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <section id="services">
+        <h2>Nos Services</h2>
+        <p>Une agence cyber solide comme un Rock.</p>
+    </section>
+
+    {% if user and not user.is_employee %}
+    <section id="create-devis">
+        <a href="{{ url_for('create_devis') }}" class="btn-create-devis">Créer un Devis</a>
+    </section>
+    {% endif %}
+
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <form>
+            <input type="text" placeholder="Votre nom">
+            <input type="email" placeholder="Votre email">
+            <textarea placeholder="Votre message"></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Agence Goleur. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

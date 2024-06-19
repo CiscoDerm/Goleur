@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier Devis - Agence Cybernétique</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="edit-devis-container">
+        <h2>Modifier Devis</h2>
+        <form action="{{ url_for('admin_edit_devis', devis_id=devis.id) }}" method="post">
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select id="status" name="status" required>
+                    <option value="En attente" {% if devis.status == 'En attente' %}selected{% endif %}>En attente</option>
+                    <option value="En cours" {% if devis.status == 'En cours' %}selected{% endif %}>En cours</option>
+                    <option value="Terminé" {% if devis.status == 'Terminé' %}selected{% endif %}>Terminé</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="admin_notes">Notes Admin:</label>
+                <textarea id="admin_notes" name="admin_notes">{{ devis.admin_notes }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="employee_id">Assign to Employee:</label>
+                <select id="employee_id" name="employee_id">
+                    <option value="">Select an employee</option>
+                    {% for employee in employees %}
+                    <option value="{{ employee.id }}" {% if devis.employee_id == employee.id %}selected{% endif %}>{{ employee.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn">Mettre à jour</button>
+        </form>
+    </div>
+</body>
+</html>

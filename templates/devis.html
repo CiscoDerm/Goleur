@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un Devis - Agence Cybernétique</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="devis-container">
+        <h2>Créer un Devis</h2>
+        <form action="{{ url_for('create_devis') }}" method="post">
+            <div class="form-group">
+                <label for="entreprise">Entreprise:</label>
+                <input type="text" id="entreprise" name="entreprise" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="service_type">Type de service:</label>
+                <select id="service_type" name="service_type" required>
+                    <option value="Audit de sécurité">Audit de sécurité</option>
+                    <option value="Installation de pare-feu">Installation de pare-feu</option>
+                    <option value="Formation en cybersécurité">Formation en cybersécurité</option>
+                    <option value="Sécurisation des données">Sécurisation des données</option>
+                    <option value="Surveillance et détection des intrusions">Surveillance et détection des intrusions</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="budget">Budget:</label>
+                <input type="text" id="budget" name="budget" required>
+            </div>
+            <div class="form-group">
+                <label for="urgence">Niveau d'urgence:</label>
+                <select id="urgence" name="urgence" required>
+                    <option value="Élevé">Élevé</option>
+                    <option value="Moyen">Moyen</option>
+                    <option value="Faible">Faible</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="contact_number">Numéro de contact:</label>
+                <input type="text" id="contact_number" name="contact_number" required>
+            </div>
+            <div class="form-group">
+                <label for="contact_email">Email de contact:</label>
+                <input type="email" id="contact_email" name="contact_email" required>
+            </div>
+            <div class="form-group">
+                <label for="additional_info">Informations supplémentaires:</label>
+                <textarea id="additional_info" name="additional_info"></textarea>
+            </div>
+            <button type="submit" class="btn">Créer le Devis</button>
+        </form>
+    </div>
+</body>
+</html>

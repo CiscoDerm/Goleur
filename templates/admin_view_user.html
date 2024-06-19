@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voir Utilisateur - Agence Cybernétique</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="user-container">
+        <h2>Utilisateur: {{ user.name }}</h2>
+        <p>Email: {{ user.email }}</p>
+        <h3>Devis</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Entreprise</th>
+                    <th>Description</th>
+                    <th>Type de service</th>
+                    <th>Budget</th>
+                    <th>Urgence</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for devis in user.devis %}
+                <tr>
+                    <td>{{ devis.entreprise }}</td>
+                    <td>{{ devis.description }}</td>
+                    <td>{{ devis.service_type }}</td>
+                    <td>{{ devis.budget }}</td>
+                    <td>{{ devis.urgence }}</td>
+                    <td>{{ devis.status }}</td>
+                    <td>{{ devis.date.strftime('%d/%m/%Y') }}</td>
+                    <td>
+                        <a href="{{ url_for('admin_edit_devis', devis_id=devis.id) }}" class="btn">Modifier</a>
+                        <a href="{{ url_for('admin_delete_devis', devis_id=devis.id) }}" class="btn">Supprimer</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

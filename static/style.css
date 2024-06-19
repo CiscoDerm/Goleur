@@ -1,0 +1,482 @@
+/* Styles de base */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Styles pour le header */
+header {
+    background-color: #0a74da;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffdd57;
+}
+
+/* Styles pour les sections */
+section {
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section#services {
+    background-color: #f1f1f1;
+}
+
+section#contact {
+    background-color: #f9f9f9;
+}
+
+/* Styles pour les formulaires */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #0a74da;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #095bb5;
+}
+
+/* Styles pour le footer */
+footer {
+    background-color: #0a74da;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Styles spécifiques à la page d'inscription */
+.signup-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #0a74da;
+}
+
+.signup-container .form-group {
+    margin-bottom: 20px;
+}
+
+.signup-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.signup-container .btn {
+    background-color: #0a74da;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.signup-container .btn:hover {
+    background-color: #095bb5;
+}
+
+/* Styles spécifiques à la page de connexion */
+.login-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #0a74da;
+}
+
+.login-container .form-group {
+    margin-bottom: 20px;
+}
+
+.login-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-container .btn {
+    background-color: #0a74da;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-container .btn:hover {
+    background-color: #095bb5;
+}
+
+/* Styles spécifiques à la page de devis */
+.devis-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.devis-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #0a74da;
+}
+
+.devis-container .form-group {
+    margin-bottom: 20px;
+}
+
+.devis-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.devis-container .btn {
+    background-color: #0a74da;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.devis-container .btn:hover {
+    background-color: #095bb5;
+}
+
+/* Styles pour la liste des devis */
+.devis-list-container {
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;  /* Add horizontal scroll */
+}
+
+.devis-list-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #0a74da;
+}
+
+.devis-list-container .btn {
+    display: block;
+    width: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #0a74da;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.devis-list-container .btn:hover {
+    background-color: #095bb5;
+}
+
+.devis-list-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed;  /* Fixed table layout */
+}
+
+.devis-list-container table, .devis-list-container th, .devis-list-container td {
+    border: 1px solid #ddd;
+}
+
+.devis-list-container th, .devis-list-container td {
+    padding: 15px;
+    text-align: left;
+    word-wrap: break-word;  /* Break long words */
+}
+
+.devis-list-container th {
+    background-color: #f1f1f1;
+}
+
+.devis-list-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.devis-list-container tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styles pour la page de tableau de bord admin */
+.dashboard-container {
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #0a74da;
+}
+
+.dashboard-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed;  /* Fixed table layout */
+}
+
+.dashboard-container table, .dashboard-container th, .dashboard-container td {
+    border: 1px solid #ddd;
+}
+
+.dashboard-container th, .dashboard-container td {
+    padding: 15px;
+    text-align: left;
+    word-wrap: break-word;  /* Break long words */
+}
+
+.dashboard-container th {
+    background-color: #f1f1f1;
+}
+
+.dashboard-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.dashboard-container tr:hover {
+    background-color: #f1f1f1;
+}
+
+.dashboard-container .btn {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #0a74da;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-container .btn:hover {
+    background-color: #095bb5;
+}
+
+/* Styles pour la page de l'utilisateur admin */
+.user-container {
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #0a74da;
+}
+
+.user-container p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.user-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed;  /* Fixed table layout */
+}
+
+.user-container table, .user-container th, .user-container td {
+    border: 1px solid #ddd;
+}
+
+.user-container th, .user-container td {
+    padding: 15px;
+    text-align: left;
+    word-wrap: break-word;  /* Break long words */
+}
+
+.user-container th {
+    background-color: #f1f1f1;
+}
+
+.user-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.user-container tr:hover {
+    background-color: #f1f1f1;
+}
+
+.user-container .btn {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #0a74da;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.user-container .btn:hover {
+    background-color: #095bb5;
+}
+
+/* Styles pour la page de modification de devis admin */
+.edit-devis-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.edit-devis-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #0a74da;
+}
+
+.edit-devis-container .form-group {
+    margin-bottom: 20px;
+}
+
+.edit-devis-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.edit-devis-container .form-group select,
+.edit-devis-container .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.edit-devis-container .btn {
+    background-color: #0a74da;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.edit-devis-container .btn:hover {
+    background-color: #095bb5;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Devis - Agence Cybernétique</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="devis-list-container">
+        <h2>Mes Devis</h2>
+        <a href="{{ url_for('index') }}" class="btn">Accueil</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Entreprise</th>
+                    <th>Description</th>
+                    <th>Type de service</th>
+                    <th>Budget</th>
+                    <th>Urgence</th>
+                    <th>Numéro de contact</th>
+                    <th>Email de contact</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Commentaires</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for devis in devis_list %}
+                <tr>
+                    <td>{{ devis.entreprise }}</td>
+                    <td>{{ devis.description }}</td>
+                    <td>{{ devis.service_type }}</td>
+                    <td>{{ devis.budget }}</td>
+                    <td>{{ devis.urgence }}</td>
+                    <td>{{ devis.contact_number }}</td>
+                    <td>{{ devis.contact_email }}</td>
+                    <td>{{ devis.status }}</td>
+                    <td>{{ devis.date.strftime('%d/%m/%Y') }}</td>
+                    <td>{{ devis.admin_notes }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
