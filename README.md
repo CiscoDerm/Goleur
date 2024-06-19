@@ -56,3 +56,6 @@ Cyber Croc est une application web développée en Flask qui permet aux utilisat
 Pour ajouter un administrateur, utilisez le script `create_users.py` :
 ```bash
 python create_admin.py
+```
+### ATTENTION
+Si vous modifiez certaines choses, il ne faut pas oublier de supprimer le fichier app.db et refaire ce que la tache 2 nous demande, pour relancer une base donnée saine et vide.
