@@ -1,4 +1,4 @@
-/* Styles de base */
+/* Style de base */
 body, html {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@ body, html {
     color: #333;
 }
 
-/* Styles pour le header */
+/* Style pour le header */
 header {
     background-color: #0a74da;
     color: white;
@@ -42,7 +42,7 @@ nav ul li a:hover {
     color: #ffdd57;
 }
 
-/* Styles pour les sections */
+/* Style pour les sections */
 section {
     padding: 40px;
     margin: 20px auto;
@@ -60,7 +60,7 @@ section#contact {
     background-color: #f9f9f9;
 }
 
-/* Styles pour les formulaires */
+/* Style pour les formulaires */
 form input[type="text"],
 form input[type="email"],
 form input[type="password"],
@@ -90,7 +90,7 @@ form button:hover {
     background-color: #095bb5;
 }
 
-/* Styles pour le footer */
+/* Style pour le footer */
 footer {
     background-color: #0a74da;
     color: white;
@@ -107,7 +107,7 @@ footer p {
     font-size: 1em;
 }
 
-/* Styles spécifiques à la page d'inscription */
+/* Style spécifiques à la page d'inscription */
 .signup-container {
     max-width: 400px;
     margin: 40px auto;
@@ -149,7 +149,7 @@ footer p {
     background-color: #095bb5;
 }
 
-/* Styles spécifiques à la page de connexion */
+/* Style spécifiques à la page de connexion */
 .login-container {
     max-width: 400px;
     margin: 40px auto;
@@ -191,7 +191,7 @@ footer p {
     background-color: #095bb5;
 }
 
-/* Styles spécifiques à la page de devis */
+/* Style spécifiques à la page de devis */
 .devis-container {
     max-width: 400px;
     margin: 40px auto;
@@ -233,7 +233,7 @@ footer p {
     background-color: #095bb5;
 }
 
-/* Styles pour la liste des devis */
+/* Style pour la liste des devis */
 .devis-list-container {
     max-width: 100%;
     margin: 40px auto;
@@ -241,7 +241,7 @@ footer p {
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow-x: auto;  /* Add horizontal scroll */
+    overflow-x: auto;  
 }
 
 .devis-list-container h2 {
@@ -273,7 +273,7 @@ footer p {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-    table-layout: fixed;  /* Fixed table layout */
+    table-layout: fixed;  
 }
 
 .devis-list-container table, .devis-list-container th, .devis-list-container td {
@@ -283,7 +283,7 @@ footer p {
 .devis-list-container th, .devis-list-container td {
     padding: 15px;
     text-align: left;
-    word-wrap: break-word;  /* Break long words */
+    word-wrap: break-word;  
 }
 
 .devis-list-container th {
@@ -298,7 +298,7 @@ footer p {
     background-color: #f1f1f1;
 }
 
-/* Styles pour la page de tableau de bord admin */
+/* Style pour la page de tableau de bord admin */
 .dashboard-container {
     max-width: 100%;
     margin: 40px auto;
@@ -318,7 +318,7 @@ footer p {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-    table-layout: fixed;  /* Fixed table layout */
+    table-layout: fixed;  
 }
 
 .dashboard-container table, .dashboard-container th, .dashboard-container td {
@@ -328,7 +328,7 @@ footer p {
 .dashboard-container th, .dashboard-container td {
     padding: 15px;
     text-align: left;
-    word-wrap: break-word;  /* Break long words */
+    word-wrap: break-word;  
 }
 
 .dashboard-container th {
@@ -361,7 +361,7 @@ footer p {
     background-color: #095bb5;
 }
 
-/* Styles pour la page de l'utilisateur admin */
+/* Style pour la page de l'utilisateur admin */
 .user-container {
     max-width: 100%;
     margin: 40px auto;
@@ -386,7 +386,7 @@ footer p {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-    table-layout: fixed;  /* Fixed table layout */
+    table-layout: fixed;  
 }
 
 .user-container table, .user-container th, .user-container td {
@@ -396,7 +396,7 @@ footer p {
 .user-container th, .user-container td {
     padding: 15px;
     text-align: left;
-    word-wrap: break-word;  /* Break long words */
+    word-wrap: break-word;  
 }
 
 .user-container th {
@@ -429,7 +429,7 @@ footer p {
     background-color: #095bb5;
 }
 
-/* Styles pour la page de modification de devis admin */
+/* Style pour la page de modification de devis admin */
 .edit-devis-container {
     max-width: 600px;
     margin: 40px auto;
@@ -480,7 +480,7 @@ footer p {
 .edit-devis-container .btn:hover {
     background-color: #095bb5;
 }
-/* Styles pour la page de profil */
+/* Style pour la page de profil */
 .profile-container {
     max-width: 600px;
     margin: 40px auto;

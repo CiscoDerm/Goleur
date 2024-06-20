@@ -6,11 +6,11 @@ from datetime import datetime
 
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
-app.secret_key = os.urandom(24)  # Clé secrète pour les sessions
+app.secret_key = os.urandom(24)  # Clé pour sessions
 
 db.init_app(app)
 
-# Configure logging
+# Configure login
 logging.basicConfig(level=logging.DEBUG)
 
 @app.route('/')
@@ -71,7 +71,7 @@ def login():
 @app.route('/logout')
 def logout():
     session.pop('user_id', None)
-    session.pop('is_admin', None)  # Retirer l'information admin de la session
+    session.pop('is_admin', None)  
     session.pop('is_employee', None)
     session.pop('employee_id', None)
     return redirect(url_for('index'))
@@ -120,7 +120,7 @@ def create_devis():
             contact_number=contact_number,
             contact_email=contact_email,
             additional_info=additional_info,
-            status='En attente',  # Initial status
+            status='En attente',  
             date=date
         )
         db.session.add(new_devis)
